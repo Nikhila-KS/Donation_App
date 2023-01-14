@@ -52,6 +52,8 @@ A lot of features offered in the app are as follows:
 <img src="https://user-images.githubusercontent.com/104531927/212479749-29ef16f7-0a03-4fa9-8b22-8d63667f1869.jpeg" width=20%>        
                                     
 * Form - It contains all of the necessary information about the person, such as name, email, phone number, address, password, and confirmation.
+<img src="https://user-images.githubusercontent.com/104531927/212479961-25cf7496-a510-4d48-bfed-2916e23326a6.jpeg" width=20%>
+
         
 * Profile Page - This includes options like changing your password, visiting our website, notification setting, Celestial Biscuit IGDTUW and editing your details. Additionally, it has links to social media platforms that allow one to interact with society.
 <img src="https://user-images.githubusercontent.com/104531927/212479678-546908a4-c76f-413d-a0b3-dae7fd6037f0.jpeg" width=20%>
