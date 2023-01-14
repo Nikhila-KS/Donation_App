@@ -45,7 +45,7 @@ A lot of features offered in the app are as follows:
 </p>
 
 * Home Page - It has features like when and what you opened in the app and lists all of the categories like volunteering, donations, etc. Our top Do-Goders, those who gave the most, are also included.       
-<img src="https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg" width=30%>
+<img src="https://user-images.githubusercontent.com/104531927/212486530-12caa4a9-6329-484c-9ba6-7e939dd5528d.jpeg" width=30%>
                                     
 * Donation Drive page gives list of upcoming and recent donation drives.
 <img src="https://user-images.githubusercontent.com/94682086/212465901-5a86ae99-51ba-4f25-a5bb-ee3b9ebcb855.jpeg" width=30%>
@@ -61,6 +61,10 @@ A lot of features offered in the app are as follows:
 <img src="https://user-images.githubusercontent.com/104531927/212479678-546908a4-c76f-413d-a0b3-dae7fd6037f0.jpeg" width=30%>
  
 * Edit Profile Page - One can change their photo, name, email, location, and phone number and then save the changes.
+<img src="https://user-images.githubusercontent.com/104531927/212486479-cce41f59-eaa2-4cbc-9f93-a96236a1d9ec.jpeg" width=30%>
+
+* About Us Page - The page which introduces the user to our marvelous team members!!
+<img src="https://user-images.githubusercontent.com/104531927/212486593-de81cc35-6388-4ee0-93d0-a1012956c8ed.jpeg" width=30%>
 
 # Contributions
 Contributed by:
