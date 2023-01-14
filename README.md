@@ -3,7 +3,7 @@
 
 <h6> PROJECT DESCRIPTION: </h6>
 Donation App is an app to simplify and expidite the donation process .In current scenario where the entire process of donation process is scattered and unorganized, our app is a resolve. It makes all the information related to recent and upcoming college drives accessible at one place, allowing easy search and increased participation.
-Descriptions to each drive are available for detailed insights to the drive. A personalized experience is created with the login and signup feature.
+Descriptions to each drive are available for detailed insights to the drive. Users can resigter for the drives using the app itself. A personalized experience is created with the login and signup feature.
 
 
 
