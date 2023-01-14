@@ -32,11 +32,10 @@ A lot of features offered in the app are as follows:
 # Features
 
 * Boarding Screen - this will give you a brief overview of the motivating factors behind our app.    
-
- <img src="https://user-images.githubusercontent.com/94682086/212464581-033ca5a7-2711-4b83-98a4-787b8adda823.jpeg" width=20%>
-
-<img src="https://user-images.githubusercontent.com/94682086/212464589-c2ee37f4-e99f-4c98-bbdd-61b34bc3793e.jpeg" width=20%>
 <img src="https://user-images.githubusercontent.com/94682086/212464594-2d638e54-4e27-4ba2-a50a-674193b8c473.jpeg" width=20%>
+<img src="https://user-images.githubusercontent.com/94682086/212464581-033ca5a7-2711-4b83-98a4-787b8adda823.jpeg" width=20%>
+<img src="https://user-images.githubusercontent.com/94682086/212464589-c2ee37f4-e99f-4c98-bbdd-61b34bc3793e.jpeg" width=20%>
+
 
 * Login and signup page allowing user to access his/her account.
 <img src="https://user-images.githubusercontent.com/94682086/212465859-636a347d-cee5-4ea7-a1ef-bf27b66ea5b9.jpeg" width=20%>
@@ -44,22 +43,19 @@ A lot of features offered in the app are as follows:
 
 
 * Home Page - It has features like when and what you opened in the app and lists all of the categories like volunteering, donations, etc. Our top Do-Goders, those who gave the most, are also included.       
-* <img src="https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg" width=20%>
+<img src="https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg" width=20%>
                                     
-
 * Donation Drive page gives list of upcoming and recent donation drives.
 <img src="https://user-images.githubusercontent.com/94682086/212465901-5a86ae99-51ba-4f25-a5bb-ee3b9ebcb855.jpeg" width=20%>
 
 * Donation description giving the overview each drive and option to donate for the same.
-* <img src="https://user-images.githubusercontent.com/104531927/212478645-25cbe89b-428b-4570-a7bc-da1a6d2478e2.jpeg" width=20%>        
+<img src="https://user-images.githubusercontent.com/104531927/212478645-25cbe89b-428b-4570-a7bc-da1a6d2478e2.jpeg" width=20%>        
                                     
-* Form - It contains all of the necessary information about the person, such as name, email, phone number, address, password, and confirmation.        
-* User Details Page - This includes options like changing your password, visiting our website, notification setting, Celestial Biscuit IGDTUW and editing your details. Additionally, it has links to social media platforms that allow one to interact with society.    
-
-* <img src="https://user-images.githubusercontent.com/94682086/212466337-a53727b5-7aa1-4855-9aa0-e67b968e13f4.jpeg" width=20%>
-<img src="https://user-images.githubusercontent.com/94682086/212466355-e721abe4-3160-4f93-9cfe-f6762de41c91.jpeg" width=20%>
-
-
+* Form - It contains all of the necessary information about the person, such as name, email, phone number, address, password, and confirmation.
+        
+* Profile Page - This includes options like changing your password, visiting our website, notification setting, Celestial Biscuit IGDTUW and editing your details. Additionally, it has links to social media platforms that allow one to interact with society.
+<img src="https://user-images.githubusercontent.com/104531927/212479448-960ae254-136f-4b59-97a3-58a727c40d62.jpeg" width=20%>
+ 
 * Edit Profile Page - One can change their photo, name, email, location, and phone number and then save the changes.
 
 # Contributions
