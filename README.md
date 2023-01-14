@@ -41,11 +41,11 @@ A lot of features offered in the app are as follows:
 
 * Login and signup page allowing user to access his/her account.
 <p float="left">
+
 <img src="https://user-images.githubusercontent.com/94682086/212465859-636a347d-cee5-4ea7-a1ef-bf27b66ea5b9.jpeg" width=30%>
 <img src="https://user-images.githubusercontent.com/94682086/212465881-c6f45490-6fb2-41a9-938c-8cff241b7c6e.jpeg" width=30%>
 </p>
-
-* Home Page - It has features like when and what you opened in the app and lists all of the categories like volunteering, donations, etc. Our top Do-Goders, those who gave the most, are also included.       
+* Home Page - It has information about Recent drives and a gallery showcasing past drive images.       
 <img src="https://user-images.githubusercontent.com/104531927/212486530-12caa4a9-6329-484c-9ba6-7e939dd5528d.jpeg" width=30%>
                                     
 * Donation Drive page gives list of upcoming and recent donation drives.
@@ -54,7 +54,7 @@ A lot of features offered in the app are as follows:
 * Donation description giving the overview each drive and option to donate for the same.
 <img src="https://user-images.githubusercontent.com/104531927/212479749-29ef16f7-0a03-4fa9-8b22-8d63667f1869.jpeg" width=30%>        
                                     
-* Form - It contains all of the necessary information about the person, such as name, email, phone number, address, password, and confirmation.
+* Form - A form to confirm that user wishes to participate in the particular drive.
 <img src="https://user-images.githubusercontent.com/104531927/212479961-25cf7496-a510-4d48-bfed-2916e23326a6.jpeg" width=30%>
 
         
