@@ -65,15 +65,11 @@ A lot of features offered in the app are as follows:
 # Contributions
 Contributed by:
 * Nikhila 
-
-* Nikita Garg
-
+* Nikita Garg   <a href="https://linkedin.com/in/nikita-garg-819800220" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="30" width="40" /></a>
+* Nikita Medhi
 * Sehaj
-
 * Shreel Trivedi
-
 * Shuchita Bhutani
-
 * Simran Joon
 
 
