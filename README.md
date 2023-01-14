@@ -49,12 +49,12 @@ A lot of features offered in the app are as follows:
 <img src="https://user-images.githubusercontent.com/94682086/212465901-5a86ae99-51ba-4f25-a5bb-ee3b9ebcb855.jpeg" width=20%>
 
 * Donation description giving the overview each drive and option to donate for the same.
-<img src="https://user-images.githubusercontent.com/104531927/212478645-25cbe89b-428b-4570-a7bc-da1a6d2478e2.jpeg" width=20%>        
+<img src="https://user-images.githubusercontent.com/104531927/212479749-29ef16f7-0a03-4fa9-8b22-8d63667f1869.jpeg" width=20%>        
                                     
 * Form - It contains all of the necessary information about the person, such as name, email, phone number, address, password, and confirmation.
         
 * Profile Page - This includes options like changing your password, visiting our website, notification setting, Celestial Biscuit IGDTUW and editing your details. Additionally, it has links to social media platforms that allow one to interact with society.
-<img src="https://user-images.githubusercontent.com/104531927/212479448-960ae254-136f-4b59-97a3-58a727c40d62.jpeg" width=20%>
+<img src="https://user-images.githubusercontent.com/104531927/212479678-546908a4-c76f-413d-a0b3-dae7fd6037f0.jpeg" width=20%>
  
 * Edit Profile Page - One can change their photo, name, email, location, and phone number and then save the changes.
 
