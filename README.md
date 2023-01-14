@@ -44,7 +44,7 @@ A lot of features offered in the app are as follows:
 
 
 * Home Page - It has features like when and what you opened in the app and lists all of the categories like volunteering, donations, etc. Our top Do-Goders, those who gave the most, are also included.       
-* <img src="https://user-images.githubusercontent.com/94682086/212465914-bf781465-58f0-4b90-9f36-8d53f97c70ad.jpeg" width=20%>
+* <img src="[https://user-images.githubusercontent.com/94682086/212465914-bf781465-58f0-4b90-9f36-8d53f97c70ad.jpeg](https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg)" width=20%>
                                     
 
 * Donation Drive page gives list of upcoming and recent donation drives.
