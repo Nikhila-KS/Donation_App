@@ -39,9 +39,10 @@ A lot of features offered in the app are as follows:
 </p>
 
 * Login and signup page allowing user to access his/her account.
+<p float="left">
 <img src="https://user-images.githubusercontent.com/94682086/212465859-636a347d-cee5-4ea7-a1ef-bf27b66ea5b9.jpeg" width=30%>
 <img src="https://user-images.githubusercontent.com/94682086/212465881-c6f45490-6fb2-41a9-938c-8cff241b7c6e.jpeg" width=30%>
-
+</p>
 
 * Home Page - It has features like when and what you opened in the app and lists all of the categories like volunteering, donations, etc. Our top Do-Goders, those who gave the most, are also included.       
 <img src="https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg" width=30%>
