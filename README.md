@@ -31,11 +31,12 @@ The contents in this project follow the following structure.
 A lot of features offered in the app are as follows:
 # Features
 
-* Boarding Screen - this will give you a brief overview of the motivating factors behind our app.    
+* Boarding Screen - this will give you a brief overview of the motivating factors behind our app. 
+<p float="left">   
 <img src="https://user-images.githubusercontent.com/94682086/212464594-2d638e54-4e27-4ba2-a50a-674193b8c473.jpeg" width=30%>
 <img src="https://user-images.githubusercontent.com/94682086/212464581-033ca5a7-2711-4b83-98a4-787b8adda823.jpeg" width=30%>
 <img src="https://user-images.githubusercontent.com/94682086/212464589-c2ee37f4-e99f-4c98-bbdd-61b34bc3793e.jpeg" width=30%>
-
+</p>
 
 * Login and signup page allowing user to access his/her account.
 <img src="https://user-images.githubusercontent.com/94682086/212465859-636a347d-cee5-4ea7-a1ef-bf27b66ea5b9.jpeg" width=30%>
