@@ -68,13 +68,13 @@ A lot of features offered in the app are as follows:
 
 # Contributions
 Contributed by:
-* Nikhila 
+* Nikhila       <a href="https://www.linkedin.com/in/know-nikhila-k-s" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
 * Nikita Garg       <a href="https://linkedin.com/in/nikita-garg-819800220" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
-* Nikita Medhi
-* Sehaj
-* Shreel Trivedi
-* Shuchita Bhutani
-* Simran Joon
+* Nikita Medhi      <a href="https://www.linkedin.com/in/nikita-medhi-6aa899239/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
+* Sehaj     <a href="https://www.linkedin.com/in/sehaj-kapoor-4bbb6020b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
+* Shreel Trivedi        <a href="https://www.linkedin.com/in/shreel-trivedi-932993207" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
+* Shuchita Bhutani      <a href="https://www.linkedin.com/in/shuchita-bhutani-69b882200" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
+* Simran Joon       <a href="https://www.linkedin.com/company/celestial-biscuit-igdtuw/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nikita-garg-819800220" height="20" width="20" /></a>
 
 
 
