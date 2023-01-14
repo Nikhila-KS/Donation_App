@@ -64,7 +64,7 @@ A lot of features offered in the app are as follows:
 <img src="https://user-images.githubusercontent.com/104531927/212486479-cce41f59-eaa2-4cbc-9f93-a96236a1d9ec.jpeg" width=30%>
 
 * About Us Page - The page which introduces the user to our marvelous team members!!
-<img src="https://user-images.githubusercontent.com/104531927/212486593-de81cc35-6388-4ee0-93d0-a1012956c8ed.jpeg" width=30%>
+<img src="https://user-images.githubusercontent.com/104531927/212486633-970d9c0b-065b-416f-b6db-f650ca55a107.jpeg" width=30%>
 
 # Contributions
 Contributed by:
