@@ -33,7 +33,7 @@ A lot of features offered in the app are as follows:
 
 * Boarding Screen - this will give you a brief overview of the motivating factors behind our app.    
 
- <img src="https://user-images.githubusercontent.com/94682086/212464581-033ca5a7-2711-4b83-98a4-787b8adda823.jpeg" widhth=50% height=50%>
+ <img src="https://user-images.githubusercontent.com/94682086/212464581-033ca5a7-2711-4b83-98a4-787b8adda823.jpeg" widhth=20% height=20%>
 
 ![WhatsApp Image 2023-01-08 at 1 35 56 PM (2)](https://user-images.githubusercontent.com/94682086/212464589-c2ee37f4-e99f-4c98-bbdd-61b34bc3793e.jpeg)
 ![WhatsApp Image 2023-01-08 at 1 35 56 PM](https://user-images.githubusercontent.com/94682086/212464594-2d638e54-4e27-4ba2-a50a-674193b8c473.jpeg)
