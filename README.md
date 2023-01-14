@@ -44,13 +44,14 @@ A lot of features offered in the app are as follows:
 
 
 * Home Page - It has features like when and what you opened in the app and lists all of the categories like volunteering, donations, etc. Our top Do-Goders, those who gave the most, are also included.       
-* <img src="[https://user-images.githubusercontent.com/94682086/212465914-bf781465-58f0-4b90-9f36-8d53f97c70ad.jpeg](https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg)" width=20%>
+* <img src="https://user-images.githubusercontent.com/104531927/212478505-4092f2a0-66b5-4ba2-a598-49dfb345d154.jpeg" width=20%>
                                     
 
 * Donation Drive page gives list of upcoming and recent donation drives.
 <img src="https://user-images.githubusercontent.com/94682086/212465901-5a86ae99-51ba-4f25-a5bb-ee3b9ebcb855.jpeg" width=20%>
 
-* Donation description giving the overview each drive and option to donate for the same.        
+* Donation description giving the overview each drive and option to donate for the same.
+* <img src="https://user-images.githubusercontent.com/104531927/212478645-25cbe89b-428b-4570-a7bc-da1a6d2478e2.jpeg" width=20%>        
                                     
 * Form - It contains all of the necessary information about the person, such as name, email, phone number, address, password, and confirmation.        
 * User Details Page - This includes options like changing your password, visiting our website, notification setting, Celestial Biscuit IGDTUW and editing your details. Additionally, it has links to social media platforms that allow one to interact with society.    
