@@ -8,7 +8,7 @@ Descriptions to each drive are available for detailed insights to the drive. Use
 
 
 ## Site Map
-The contents in this project follow the following structure.
+The contents in this project follow the following structure:
 
 ```
 ├── Boarding Screen
