@@ -82,7 +82,7 @@ class _FormScreenState extends State<FormScreen> {
               children: [
                 //hello
                 const Text(
-                  'Donation Now',
+                  'Donate Now',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
