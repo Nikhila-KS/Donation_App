@@ -195,7 +195,8 @@ class _FormScreenState extends State<FormScreen> {
     await firebaseFirestore
         .collection("users")
         .doc(user?.uid)
-        .update({'phoneNumber': ph});
+        .update({'phoneNumber': ph,'${widget.name}_formFilled': true,
+    });
 
     CollectionReference ref =
     FirebaseFirestore.instance

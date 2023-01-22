@@ -1,3 +1,4 @@
+
 import 'package:donation_app_igdtuw/screens/aboutpage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -250,9 +251,9 @@ class _viewprofileState extends State<viewprofile> {
                             // print(subject); //output: Hello%20Flutter
                             Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
                             if (await launchUrl(mail)) {
-                            //email app opened
+                              //email app opened
                             }else{
-                            //email app is not opened
+                              //email app is not opened
                             }
                           },
                           child: Text(

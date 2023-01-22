@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'form.dart';
 
@@ -15,6 +17,16 @@ class ViewNote extends StatefulWidget {
 }
 
 class _ViewNoteState extends State<ViewNote> {
+  Future<bool> _fetchData() async {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    FirebaseAuth _auth = FirebaseAuth.instance;
+    User? user = _auth.currentUser;
+    final snapshot= await firestore.collection("users").doc(user?.uid).get();
+    Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
+    final formFilled = '${widget.data['name']}_formFilled';
+    return data.containsKey(formFilled);
+  }
+
   late String title;
   late String des;
   late String url;
@@ -229,12 +241,12 @@ class _ViewNoteState extends State<ViewNote> {
                               fontFamily: "lato",
                               color: Colors.white70,
                             ),
-                            initialValue: widget.data['desc'],
+                            initialValue: widget.data['desc'].replaceAll( "\\n", "\n" ),
                             enabled: edit,
                             onChanged: (_val) {
                               des = _val;
                             },
-                            maxLines: 7,
+                            maxLines:7,
                             validator: (_val) {
                               if (_val!.isEmpty) {
                                 return "Can't be empty !";
@@ -263,8 +275,17 @@ class _ViewNoteState extends State<ViewNote> {
                                 ),
                               ],
                             ),
-                            onPressed: () {
-                              pushdetailstoform();
+                            onPressed: ()
+                            // {
+                            //   pushdetailstoform();
+                            // },
+                            async{
+                              if(await _fetchData()){
+                                Fluttertoast.showToast(msg: "Form already filled ");
+                              }
+                              else {
+                                pushdetailstoform();
+                              }
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(

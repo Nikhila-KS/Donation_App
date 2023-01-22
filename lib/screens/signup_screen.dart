@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:donation_app_igdtuw/screens/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'home_screen.dart';
 import '/models/user_model.dart';
+import 'navbar.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -208,72 +210,72 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
 
     return Container(
-        decoration: BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-        image: AssetImage('assets/bg4.jpg'), fit: BoxFit.cover),
-    ),
-    child: Scaffold(
-      backgroundColor: Colors.transparent,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white60),
-          onPressed: () {
-            // passing this to our root
-            Navigator.of(context).pop();
-          },
-        ),
+            image: AssetImage('assets/bg4.jpg'), fit: BoxFit.cover),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Container(
-            color: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.all(36.0),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(
-                      height: 50,
-                      child: Text('Welcome !',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 35,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.white60),
+            onPressed: () {
+              // passing this to our root
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Container(
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.all(36.0),
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 50,
+                        child: Text('Welcome !',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35,
+                          ),
                         ),
                       ),
-                    ),
-                    Text('Create a new account',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 19,
+                      Text('Create a new account',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 19,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 45),
-                    firstNameField,
-                    SizedBox(height: 20),
-                    secondNameField,
-                    SizedBox(height: 20),
-                    emailField,
-                    SizedBox(height: 20),
-                    passwordField,
-                    SizedBox(height: 20),
-                    confirmPasswordField,
-                    SizedBox(height: 20),
-                    signUpButton,
-                    SizedBox(height: 15),
-                  ],
+                      SizedBox(height: 45),
+                      firstNameField,
+                      SizedBox(height: 20),
+                      secondNameField,
+                      SizedBox(height: 20),
+                      emailField,
+                      SizedBox(height: 20),
+                      passwordField,
+                      SizedBox(height: 20),
+                      confirmPasswordField,
+                      SizedBox(height: 20),
+                      signUpButton,
+                      SizedBox(height: 15),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
         ),
-      ),
-    ),);
+      ),);
   }
   void signUp(String email, String password) async {
     if (_formKey.currentState!.validate()) {
@@ -327,6 +329,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     userModel.uid = user.uid;
     userModel.firstName = firstNameEditingController.text;
     userModel.secondName = secondNameEditingController.text;
+    userModel.image_url = 'https://cdn-icons-png.flaticon.com/512/847/847969.png';
 
     await firebaseFirestore
         .collection("users")
@@ -336,7 +339,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
     Navigator.pushAndRemoveUntil(
         (context),
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-        (route) => false);
+        MaterialPageRoute(builder: (context) => navMainPage()),
+            (route) => false);
   }
 }

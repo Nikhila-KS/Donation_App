@@ -1,3 +1,4 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -5,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:path/path.dart';
+import 'package:path/path.dart' ;
 import 'dart:io' as io;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:donation_app_igdtuw/models/user_model.dart';
@@ -96,7 +97,7 @@ class _UploadingImageToFirebaseStorageState
 
   String? fname;
   String? sname;
-  String? phone;
+  // String? phone;
   String? email;
   @override
   Widget build(BuildContext context) {
@@ -136,9 +137,14 @@ class _UploadingImageToFirebaseStorageState
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: CircleAvatar(
-                          radius: 85,
-                          child: Image.network(data["image_url"])
+                      child:CircleAvatar(
+                        radius: 86,
+                        child:ClipOval(
+                        child: CircleAvatar(
+                            radius: 85,
+                            child: Image.network(data["image_url"])
+                        ),
+                      ),
                       ),
                     ),
                     Align(
@@ -280,44 +286,44 @@ class _UploadingImageToFirebaseStorageState
                       ),
                     ),
                     SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-                      child: Column(
-                        children: [
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Phone Number",
-                              style: TextStyle(
-                                fontFamily: "Spartan",
-                                fontSize: 20,
-                                color: Colors.deepOrangeAccent,
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 10),
-                          TextFormField(
-                              autofocus: false,
-                              keyboardType: TextInputType.number,
-                              onChanged: (value) {
-                                phone = value;
-                              },
-                              textInputAction: TextInputAction.next,
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white.withOpacity(0.2),
-                                contentPadding:
-                                EdgeInsets.fromLTRB(20, 15, 20, 15),
-                                hintText: data["phoneNumber"],
-                                hintStyle: TextStyle(
-                                    fontSize: 20.0, color: Colors.white70),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              )),
-                        ],
-                      ),
-                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                    //   child: Column(
+                    //     children: [
+                    //       Align(
+                    //         alignment: Alignment.centerLeft,
+                    //         child: Text(
+                    //           "Phone Number",
+                    //           style: TextStyle(
+                    //             fontFamily: "Spartan",
+                    //             fontSize: 20,
+                    //             color: Colors.deepOrangeAccent,
+                    //           ),
+                    //         ),
+                    //       ),
+                    //       SizedBox(height: 10),
+                    //       TextFormField(
+                    //           autofocus: false,
+                    //           keyboardType: TextInputType.number,
+                    //           onChanged: (value) {
+                    //             phone = value;
+                    //           },
+                    //           textInputAction: TextInputAction.next,
+                    //           decoration: InputDecoration(
+                    //             filled: true,
+                    //             fillColor: Colors.white.withOpacity(0.2),
+                    //             contentPadding:
+                    //             EdgeInsets.fromLTRB(20, 15, 20, 15),
+                    //             hintText: data["phoneNumber"],
+                    //             hintStyle: TextStyle(
+                    //                 fontSize: 20.0, color: Colors.white70),
+                    //             border: OutlineInputBorder(
+                    //               borderRadius: BorderRadius.circular(10),
+                    //             ),
+                    //           )),
+                    //     ],
+                    //   ),
+                    // ),
                     SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
@@ -340,7 +346,7 @@ class _UploadingImageToFirebaseStorageState
                           },
                           child: Text('Save Changes',
                             style: TextStyle(
-                              color: Colors.white
+                                color: Colors.white
                             ),
                           ),
                           style: TextButton.styleFrom(
@@ -368,12 +374,12 @@ class _UploadingImageToFirebaseStorageState
 
     UserModel userModel = UserModel();
     userModel.uid = user?.uid;
-    if(phone!=null) {
-      await firebaseFirestore
-          .collection("users")
-          .doc(user?.uid)
-          .update({'phoneNumber': phone});
-    }
+    // if(phone!=null) {
+    //   await firebaseFirestore
+    //       .collection("users")
+    //       .doc(user?.uid)
+    //       .update({'phoneNumber': phone});
+    // }
     if(fname!=null) {
       await firebaseFirestore
           .collection("users")
@@ -386,32 +392,37 @@ class _UploadingImageToFirebaseStorageState
           .doc(user?.uid)
           .update({'secondName': sname});
     }
-    if(email!=null) {
+    if(email!="" && email!=null) {
       await firebaseFirestore
           .collection("users")
           .doc(user?.uid)
           .update({'email': email});
     }
-    late String img_url;
+    String img_url="https://cdn-icons-png.flaticon.com/512/847/847969.png";
     String fileName = basename(imageFile.path);
     Reference firebaseStorageRef =
     FirebaseStorage.instance.ref().child('uploads/$fileName');
     UploadTask uploadTask = firebaseStorageRef.putFile(imageFile);
-    uploadTask.whenComplete(() async {
-      try {
-        img_url = await firebaseStorageRef.getDownloadURL();
-      } catch (onError) {
-        print("Error");
-      }
-      return img_url;
-    });
-    if(img_url!=null) {
-      await firebaseFirestore
-          .collection("users")
-          .doc(user?.uid)
-          .update({'image_url': img_url});
-    }
+    // uploadTask.whenComplete(() async {
+    //   try {
+    //     img_url = (await firebaseStorageRef.getDownloadURL()).toString();
+    //     print("AAAAAAAAAAAAAAAAAAAAAAAAAA"+img_url);
+    //   } catch (onError) {
+    //     print("Error");
+    //   }
+    //   return (await firebaseStorageRef.getDownloadURL()).toString();
+    // });
+    await firebaseFirestore
+        .collection("users")
+        .doc(user?.uid)
+        .update({'image_url': (await firebaseStorageRef.getDownloadURL()).toString()});
+    Navigator.push(
+      this.context,
+      MaterialPageRoute(builder: (context) => navMainPage()),
+    );
+
   }
+
 }
 
 // Widget Field(String title, String hint){
