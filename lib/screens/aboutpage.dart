@@ -24,7 +24,7 @@ class _AboutState extends State<About> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
             children: [
               Container(
@@ -90,6 +90,48 @@ class _AboutState extends State<About> {
                         color: Colors.white,
                         fontSize: 20,
                       ))),
+
+              Container(
+                  padding: EdgeInsets.fromLTRB(w*.02, h*.04, w*.02, h*.01),
+                  child: Text('OUR FOUNDERS',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.deepOrangeAccent,
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold))),
+              Divider(
+                height: 0,
+                thickness: h * .006,
+                indent: w * .20,
+                endIndent: w * .20,
+                color: Colors.deepOrangeAccent,
+              ),
+              Container(
+                height: h*.30,
+                padding: EdgeInsets.fromLTRB(w*.02, h*.02, w*.02, h*.02),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    makeItem(
+                        image: 'assets/Founders/PoojaGera.jpg',
+                        title: 'Pooja Gera',
+                        url: Uri.parse('https://www.linkedin.com/in/pooja-gera')),
+                    makeItem(
+                        image: 'assets/Founders/Nishtha Goyal.jpeg',
+                        title: 'Nishtha Goyal',
+                        url: Uri.parse('https://www.linkedin.com/in/nishtha0801/')),
+                    makeItem(
+                        image: 'assets/Founders/Gaurisha R Srivastava.jpg',
+                        title: 'Gaurisha R Shrivastava',
+                        url: Uri.parse('https://www.linkedin.com/in/gaurisha-r-srivastava/')),
+                    makeItem(
+                        image: 'assets/Founders/Abhigya Verma.jpg',
+                        title: 'Abhigya Verma',
+                        url: Uri.parse('https://www.linkedin.com/in/abhigya02/')),
+
+                  ],
+                ),
+              ),
               Container(
                   padding: EdgeInsets.fromLTRB(w*.02, h*.04, w*.02, h*.01),
                   child: Text('OUR TEAM',
@@ -112,9 +154,9 @@ class _AboutState extends State<About> {
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     makeItem(
-                        image: 'assets/profile_photos/CBIGDTUW.png',
-                        title: 'CBIGDTUW',
-                        url: Uri.parse('https://www.linkedin.com/company/celestial-biscuit-igdtuw/')),
+                        image: 'assets/profile_photos/JhanveeKhola.jpg',
+                        title: 'Jhanvee Khola',
+                        url: Uri.parse('https://www.linkedin.com/in/jhanvee-khola/')),
                     makeItem(
                         image: 'assets/profile_photos/Nikhila.jpeg',
                         title: 'Nikhila K S',
