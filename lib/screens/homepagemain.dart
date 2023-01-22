@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+import 'package:donation_app_igdtuw/screens/ViewNote.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:donation_app_igdtuw/screens/profileview.dart';
 import 'package:dots_indicator/dots_indicator.dart';
@@ -19,7 +21,10 @@ class _HomeState extends State<Home> {
   // Home({Key? key}) : super(key: key);
   int activeIndex = 0;
   final _firestoreInstance = FirebaseFirestore.instance;
+  CollectionReference ref = FirebaseFirestore.instance
+      .collection('drives');
   final List<String> _carouselImages = [];
+  late String fTime;
   var _dotPosition = 0;
   final List _names = [];
   final List _date =[];
@@ -44,7 +49,10 @@ class _HomeState extends State<Home> {
           qn.docs[i]["name"],
         );
         _date.add(
-          qn.docs[i]["date"].toDate().toString()
+        //     DateTime mydateTime = qn.docs[i]["date"],
+        // fTime =
+        //     DateFormat.yMMMd().add_jm().format(mydateTime),
+          DateFormat.yMMMd().add_jm().format(qn.docs[i]["date"].toDate())
         );
       }
     });
@@ -115,45 +123,66 @@ class _HomeState extends State<Home> {
                   aspectRatio: 1.5,
                   child: CarouselSlider(
                       items: _carouselImages
-                          .map((item) => Padding(
+                          .map((item) => GestureDetector(
+                        onTap:(){
+                          ref.snapshots().listen((snapshot) {
+                            Map data = {};
+                            data = snapshot.docs[_carouselImages.indexOf(item)].data() as Map;
+                            DateTime mydateTime = data!['date']?.toDate();
+                            String formattedTime =
+                            DateFormat.yMMMd().add_jm().format(mydateTime);
+                            Navigator.of(context)
+                                .push(
+                                MaterialPageRoute(
+                                  builder: (context) => ViewNote(
+                                    data,
+                                    formattedTime,
+                                    snapshot.docs[_carouselImages.indexOf(item)].reference,
+                                  ),
+                                ));
+                          });
+                        },
+                            child: Padding(
                         padding: const EdgeInsets.only(left: 3, right: 3),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Container(
-                            height: 900,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),),
-                            child: Stack(children: <Widget>[
-                              Image.network(item,
-                                fit: BoxFit.fitWidth,
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                              height: 900,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),),
+                              child: Stack(children: <Widget>[
+                                Image.network(item,
+                                  fit: BoxFit.fitWidth,
+                                ),
+                                Padding(
+                                    padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          _names[_carouselImages.indexOf(item)],
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 27.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Text(
+                                            // formattedTime,
+                                          _date[_carouselImages.indexOf(item)],
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                              ],
                               ),
-                              Padding(
-                                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        _names[_carouselImages.indexOf(item)],
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      Text(
-                                        _date[_carouselImages.indexOf(item)],
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 15.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  )),
-                            ],
                             ),
-                          ),
                         ),
-                      ))
+                      ),
+                          ))
                           .toList(),
                       options: CarouselOptions(
                           autoPlay: false,
