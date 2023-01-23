@@ -134,7 +134,7 @@ class _AboutState extends State<About> {
                         url: Uri.parse('https://www.linkedin.com/in/abhigya02/')),
                     makeItem(
                         image: 'assets/profile_photos/JhanveeKhola.jpg',
-                        title: 'Jhanvee Khola Developer',
+                        title: 'Jhanvee Khola UI/UX Designer',
                         url: Uri.parse('https://www.linkedin.com/in/jhanvee-khola/')),
                     makeItem(
                         image: 'assets/profile_photos/Nikhila.jpeg',
