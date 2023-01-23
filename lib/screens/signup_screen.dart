@@ -1,10 +1,7 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:donation_app_igdtuw/screens/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'home_screen.dart';
 import '/models/user_model.dart';
 import 'navbar.dart';
 
@@ -54,10 +51,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
-          prefixIcon: Icon(Icons.account_circle,color: Colors.white60,),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.account_circle,color: Colors.white60,),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "First Name",
-          hintStyle:  TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -82,10 +79,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
-          prefixIcon: Icon(Icons.account_circle,color: Colors.white60,),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.account_circle,color: Colors.white60,),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Second Name",
-          hintStyle:  TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -114,10 +111,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
-          prefixIcon: Icon(Icons.mail,color: Colors.white60,),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.mail,color: Colors.white60,),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Email",
-          hintStyle:  TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -129,7 +126,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         controller: passwordEditingController,
         obscureText: true,
         validator: (value) {
-          RegExp regex = new RegExp(r'^.{6,}$');
+          RegExp regex = RegExp(r'^.{6,}$');
           if (value!.isEmpty) {
             return ("Password is required for login");
           }
@@ -144,10 +141,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
-          prefixIcon: Icon(Icons.vpn_key,color: Colors.white60,),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.vpn_key,color: Colors.white60,),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Password",
-          hintStyle:  TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -172,10 +169,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
-          prefixIcon: Icon(Icons.vpn_key, color: Colors.white70),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.vpn_key, color: Colors.white70),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Confirm Password",
-          hintStyle:  TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -187,7 +184,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       borderRadius: BorderRadius.circular(30),
       color: Colors.redAccent,
       child: Container(
-        decoration: BoxDecoration(gradient:LinearGradient(
+        decoration: BoxDecoration(gradient:const LinearGradient(
           colors: [
             Colors.orangeAccent,
             Colors.redAccent,
@@ -195,12 +192,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ),
             borderRadius: BorderRadius.circular(5)),
         child: MaterialButton(
-            padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+            padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
             minWidth: MediaQuery.of(context).size.width,
             onPressed: () {
               signUp(emailEditingController.text, passwordEditingController.text);
             },
-            child: Text(
+            child: const Text(
               "Sign Up",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -210,7 +207,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/bg4.jpg'), fit: BoxFit.cover),
       ),
@@ -220,7 +217,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.white60),
+            icon: const Icon(Icons.arrow_back, color: Colors.white60),
             onPressed: () {
               // passing this to our root
               Navigator.of(context).pop();
@@ -239,7 +236,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                         child: Text('Welcome !',
                           style: TextStyle(
@@ -249,25 +246,25 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           ),
                         ),
                       ),
-                      Text('Create a new account',
+                      const Text('Create a new account',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 19,
                         ),
                       ),
-                      SizedBox(height: 45),
+                      const SizedBox(height: 45),
                       firstNameField,
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       secondNameField,
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       emailField,
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       passwordField,
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       confirmPasswordField,
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       signUpButton,
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                     ],
                   ),
                 ),
@@ -315,10 +312,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     }
   }
   postDetailsToFirestore() async {
-    // calling our firestore
-    // calling our user model
-    // sedning these values
-
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     User? user = _auth.currentUser;
 

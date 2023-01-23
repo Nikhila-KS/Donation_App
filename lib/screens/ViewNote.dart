@@ -10,7 +10,7 @@ class ViewNote extends StatefulWidget {
   final String time;
   final DocumentReference ref;
 
-  ViewNote(this.data, this.time, this.ref);
+  const ViewNote(this.data, this.time, this.ref);
 
   @override
   _ViewNoteState createState() => _ViewNoteState();
@@ -31,7 +31,6 @@ class _ViewNoteState extends State<ViewNote> {
   late String des;
   late String url;
   var size,height,width;
-  // late String loc;
 
   bool edit = false;
   GlobalKey<FormState> key = GlobalKey<FormState>();
@@ -59,12 +58,9 @@ class _ViewNoteState extends State<ViewNote> {
               Container(
                 height: height, //half of the height size
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.black,
                 ),
-                // padding: EdgeInsets.all(
-                //   12.0,
-                // ),
               ),
               Positioned(
                 top: 0,
@@ -78,7 +74,7 @@ class _ViewNoteState extends State<ViewNote> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  padding: EdgeInsets.all(
+                  padding: const EdgeInsets.all(
                     12.0,
                   ),
                 ),
@@ -91,14 +87,14 @@ class _ViewNoteState extends State<ViewNote> {
                 child: Container(
                   height: height / 2, //half of the height size
                   width: width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(35.0),
                       topRight: Radius.circular(35.0),
                     ),
                   ),
-                  padding: EdgeInsets.all(
+                  padding: const EdgeInsets.all(
                     12.0,
                   ),
                 ),
@@ -115,27 +111,27 @@ class _ViewNoteState extends State<ViewNote> {
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(
-                          Icons.arrow_back_rounded,
-                          size: 24.0,
-                        ),
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                             Colors.transparent,
                           ),
                           padding: MaterialStateProperty.all(
-                            EdgeInsets.symmetric(
+                            const EdgeInsets.symmetric(
                               horizontal: 25.0,
                               vertical: 8.0,
                             ),
                           ),
+                        ),
+                        child: const Icon(
+                          Icons.arrow_back_rounded,
+                          size: 24.0,
                         ),
                       ),
                       //
                     ],
                   ),
                   //
-                  SizedBox(
+                  const SizedBox(
                     height: 15.0,
                   ),
                   //
@@ -147,10 +143,10 @@ class _ViewNoteState extends State<ViewNote> {
                         TextFormField(
                           textAlignVertical: TextAlignVertical.center,
                           textAlign: TextAlign.center,
-                          decoration: InputDecoration.collapsed(
+                          decoration: const InputDecoration.collapsed(
                             hintText: "name",
                           ),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 39.0,
                             fontFamily: "lato",
                             fontWeight: FontWeight.bold,
@@ -158,8 +154,8 @@ class _ViewNoteState extends State<ViewNote> {
                           ),
                           initialValue: widget.data['name'],
                           enabled: edit,
-                          onChanged: (_val) {
-                            title = _val;
+                          onChanged: (val) {
+                            title = val;
                           },
                           validator: (_val) {
                             if (_val!.isEmpty) {
@@ -177,21 +173,21 @@ class _ViewNoteState extends State<ViewNote> {
                           ),
                           child: Text(
                             widget.time,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 25.0,
                               fontFamily: "lato",
                               color: Colors.white,
                             ),
                           ),
                         ),
-                        SizedBox(height: 190,),
+                        const SizedBox(height: 190,),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(59, 0, 0, 0),
                           child: TextFormField(
-                            decoration: InputDecoration.collapsed(
+                            decoration: const InputDecoration.collapsed(
                               hintText: "location",
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 29.0,
                               fontFamily: "lato",
                               fontWeight: FontWeight.bold,
@@ -199,12 +195,12 @@ class _ViewNoteState extends State<ViewNote> {
                             ),
                             initialValue: widget.data['location'],
                             enabled: edit,
-                            onChanged: (_val) {
-                              des = _val;
+                            onChanged: (val) {
+                              des = val;
                             },
                             maxLines: 1,
-                            validator: (_val) {
-                              if (_val!.isEmpty) {
+                            validator: (val) {
+                              if (val!.isEmpty) {
                                 return "Can't be empty !";
                               } else {
                                 return null;
@@ -212,9 +208,9 @@ class _ViewNoteState extends State<ViewNote> {
                             },
                           ),
                         ),
-                        SizedBox(height: 18,),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(25.0, 0, 0, 0),
+                        const SizedBox(height: 18,),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(25.0, 0, 0, 0),
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Text(
@@ -233,22 +229,22 @@ class _ViewNoteState extends State<ViewNote> {
                         Padding(
                           padding: const EdgeInsets.fromLTRB(25.0, 5, 10, 15),
                           child: TextFormField(
-                            decoration: InputDecoration.collapsed(
+                            decoration: const InputDecoration.collapsed(
                               hintText: "Note Description",
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 18.0,
                               fontFamily: "lato",
                               color: Colors.white70,
                             ),
                             initialValue: widget.data['desc'].replaceAll( "\\n", "\n" ),
                             enabled: edit,
-                            onChanged: (_val) {
-                              des = _val;
+                            onChanged: (val) {
+                              des = val;
                             },
                             maxLines:7,
-                            validator: (_val) {
-                              if (_val!.isEmpty) {
+                            validator: (val) {
+                              if (val!.isEmpty) {
                                 return "Can't be empty !";
                               } else {
                                 return null;
@@ -256,29 +252,13 @@ class _ViewNoteState extends State<ViewNote> {
                             },
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        const SizedBox(height: 20,),
 
                         SizedBox(
                           height: 35,
                           width: 170,
                           child: ElevatedButton(
-                            child: Row(
-                              children: [
-                                Image(
-                                    height: 25,
-                                    image: AssetImage('assets/heart.jpg')),
-                                Text(
-                                  'Donate Now',
-                                  style: TextStyle(
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                              ],
-                            ),
                             onPressed: ()
-                            // {
-                            //   pushdetailstoform();
-                            // },
                             async{
                               if(await _fetchData()){
                                 Fluttertoast.showToast(msg: "Form already filled ");
@@ -292,22 +272,31 @@ class _ViewNoteState extends State<ViewNote> {
                                   borderRadius: BorderRadius.circular(20)),
                               primary: Colors.white,
                               textStyle:
-                              TextStyle(fontSize: 20, color: Colors.black),
+                              const TextStyle(fontSize: 20, color: Colors.black),
+                            ),
+                            child: Row(
+                              children: const [
+                                Image(
+                                    height: 25,
+                                    image: AssetImage('assets/heart.jpg')),
+                                Text(
+                                  'Donate Now',
+                                  style: TextStyle(
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
-
-
                       ],
                     ),
                   ),
                 ],
               ),
-
-
             ],
           ),
         ),
@@ -318,7 +307,7 @@ class _ViewNoteState extends State<ViewNote> {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => FormScreen(name: title, date: widget.time)),
+      MaterialPageRoute(builder: (context) => FormScreen(name: title, date: widget.time, reff: widget.ref)),
     );
   }
 }

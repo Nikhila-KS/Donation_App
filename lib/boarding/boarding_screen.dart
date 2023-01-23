@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../screens/login_screen.dart';
 import 'slide.dart';
@@ -36,16 +35,16 @@ class _BoardingScreenState extends State<BoardingPage> {
     return Column(
       children: <Widget>[
         Expanded(
-          child: Container(margin: EdgeInsets.fromLTRB(32, 60, 32, 32),
+          child: Container(margin: const EdgeInsets.fromLTRB(32, 60, 32, 32),
             child: Image.asset(slide.image, fit: BoxFit.contain,),
           ),
         ),
-        SizedBox(height: 60,),
-        Padding(padding: EdgeInsets.symmetric(horizontal: 70),
+        const SizedBox(height: 60,),
+        Padding(padding: const EdgeInsets.symmetric(horizontal: 70),
           child: Text(
             slide.heading,
             textAlign: TextAlign.start,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 28,
               fontFamily: 'Bebas_Neue',
               fontWeight: FontWeight.w800,
@@ -54,7 +53,7 @@ class _BoardingScreenState extends State<BoardingPage> {
             ),
           ),
         ),
-        SizedBox(height: 140,),
+        const SizedBox(height: 140,),
       ],
     );
   }
@@ -67,10 +66,11 @@ class _BoardingScreenState extends State<BoardingPage> {
     Row row = Row(mainAxisAlignment: MainAxisAlignment.center, children: []);
     for(int i = 0; i < _slides.length; i++){
       row.children.add(_buildPageIndicatorItem(i));
-      if(i != _slides.length -1)
-        row.children.add(SizedBox(
+      if(i != _slides.length -1) {
+        row.children.add(const SizedBox(
           width: 12,
         ));
+      }
     }
     return row;
   }
@@ -83,8 +83,8 @@ class _BoardingScreenState extends State<BoardingPage> {
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: index == _currentPage
-              ? Color.fromRGBO(136, 144, 178, 1)
-              : Color.fromRGBO(206, 209, 223, 1)
+              ? const Color.fromRGBO(136, 144, 178, 1)
+              : const Color.fromRGBO(206, 209, 223, 1)
       ),
     );
   }
@@ -99,7 +99,6 @@ class _BoardingScreenState extends State<BoardingPage> {
           PageView(
             controller: _pageController,
             onPageChanged: _handlingOnPageChanged,
-            //physics: BouncingScrollPhysics(),
             children: _buildSlides(),
           ),
 
@@ -110,11 +109,11 @@ class _BoardingScreenState extends State<BoardingPage> {
             child: Column(
               children: <Widget>[
                 _buildPageIndicator(),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 ),
                 Container(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   height: 50,
                   width: 300,
                   decoration: BoxDecoration(
@@ -129,7 +128,7 @@ class _BoardingScreenState extends State<BoardingPage> {
                   child: OutlinedButton(
                     onPressed: (){},
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.transparent),
+                      side: const BorderSide(color: Colors.transparent),
                     ),
                     child: InkWell(
                       onTap: () {
@@ -139,7 +138,7 @@ class _BoardingScreenState extends State<BoardingPage> {
                                 builder: (context) =>
                                     LoginScreen()));
                       },
-                      child: Text(
+                      child: const Text(
                         'Get Started',
                         style: TextStyle(
                           fontSize: 18,
@@ -151,28 +150,7 @@ class _BoardingScreenState extends State<BoardingPage> {
                     ),
                   ),
                 ),
-                // Container(
-                //   margin: EdgeInsets.symmetric(horizontal: 32),
-                //   child: SizedBox(
-                //     width: double.infinity,
-                //     child: RaisedButton(
-                //       onPressed: (){},
-                //       color: Colors.grey[800],
-                //       child: Text('Get Started',
-                //       style: TextStyle(
-                //         fontWeight: FontWeight.bold,
-                //         fontSize: 18,
-                //         letterSpacing: 4,
-                //         //color: Colors.white,
-                //       ),
-                //       ),
-                //       shape: RoundedRectangleBorder(
-                //         borderRadius: BorderRadius.circular(100),
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
               ],
             ),
           ),

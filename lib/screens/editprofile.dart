@@ -1,4 +1,3 @@
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -10,7 +9,6 @@ import 'package:path/path.dart' ;
 import 'dart:io' as io;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:donation_app_igdtuw/models/user_model.dart';
-
 import 'navbar.dart';
 
 void main() async {
@@ -44,6 +42,8 @@ class Profile extends StatelessWidget {
 }
 
 class UploadingImageToFirebaseStorage extends StatefulWidget {
+  const UploadingImageToFirebaseStorage({Key? key}) : super(key: key);
+
   @override
   _UploadingImageToFirebaseStorageState createState() =>
       _UploadingImageToFirebaseStorageState();
@@ -82,8 +82,6 @@ class _UploadingImageToFirebaseStorageState
 
         print("Error");
       }
-      print('ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo');
-      print(img_url);
       return img_url;
     });
   }
@@ -118,21 +116,21 @@ class _UploadingImageToFirebaseStorageState
                           MaterialPageRoute(builder: (context) =>  navMainPage()),
                         );
                       },
-                      child: Icon(
-                        Icons.arrow_back_rounded,
-                        size: 24.0,
-                      ),
                       style: ButtonStyle(
                         alignment: Alignment.topLeft,
                         backgroundColor: MaterialStateProperty.all(
                           Colors.transparent,
                         ),
                         padding: MaterialStateProperty.all(
-                          EdgeInsets.symmetric(
+                          const EdgeInsets.symmetric(
                             horizontal: 25.0,
                             vertical: 8.0,
                           ),
                         ),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_back_rounded,
+                        size: 24.0,
                       ),
                     ),
                     Padding(
@@ -153,16 +151,16 @@ class _UploadingImageToFirebaseStorageState
                         onPressed: () {
                           getImage();
                         },
-                        child: Text("Change Photo"),
                         style: TextButton.styleFrom(
                           backgroundColor: Colors.black,
-                          textStyle:  TextStyle(
+                          textStyle:  const TextStyle(
                             color: Colors.orange,
                             fontSize: 20,
                             //fontWeight: FontWeight.w900,
                             fontFamily: 'Spartan',
                           ),
                         ),
+                        child: const Text("Change Photo"),
                       ),
                     ),
                     const SizedBox(
@@ -172,7 +170,7 @@ class _UploadingImageToFirebaseStorageState
                       padding: const EdgeInsets.fromLTRB(20.0, 0, 30.0, 0),
                       child: Column(
                         children: [
-                          Align(
+                          const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "First Name",
@@ -184,7 +182,7 @@ class _UploadingImageToFirebaseStorageState
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           TextFormField(
                               autofocus: false,
                               keyboardType: TextInputType.text,
@@ -196,9 +194,9 @@ class _UploadingImageToFirebaseStorageState
                                 filled: true,
                                 fillColor: Colors.white.withOpacity(0.2),
                                 contentPadding:
-                                EdgeInsets.fromLTRB(20, 15, 20, 15),
+                                const EdgeInsets.fromLTRB(20, 15, 20, 15),
                                 hintText: data["firstName"],
-                                hintStyle: TextStyle(
+                                hintStyle: const TextStyle(
                                     fontSize: 20.0, color: Colors.white70),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
@@ -207,12 +205,12 @@ class _UploadingImageToFirebaseStorageState
                         ],
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
                       child: Column(
                         children: [
-                          Align(
+                          const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "Second Name",
@@ -223,7 +221,7 @@ class _UploadingImageToFirebaseStorageState
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           TextFormField(
                               autofocus: false,
                               keyboardType: TextInputType.text,
@@ -235,9 +233,9 @@ class _UploadingImageToFirebaseStorageState
                                 filled: true,
                                 fillColor: Colors.white.withOpacity(0.2),
                                 contentPadding:
-                                EdgeInsets.fromLTRB(20, 15, 20, 15),
+                                const EdgeInsets.fromLTRB(20, 15, 20, 15),
                                 hintText: data["secondName"],
-                                hintStyle: TextStyle(
+                                hintStyle: const TextStyle(
                                     fontSize: 20.0, color: Colors.white70),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
@@ -251,7 +249,7 @@ class _UploadingImageToFirebaseStorageState
                       padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
                       child: Column(
                         children: [
-                          Align(
+                          const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "Email",
@@ -262,7 +260,7 @@ class _UploadingImageToFirebaseStorageState
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           TextFormField(
                               autofocus: false,
                               keyboardType: TextInputType.text,
@@ -274,9 +272,9 @@ class _UploadingImageToFirebaseStorageState
                                 filled: true,
                                 fillColor: Colors.white.withOpacity(0.2),
                                 contentPadding:
-                                EdgeInsets.fromLTRB(20, 15, 20, 15),
+                                const EdgeInsets.fromLTRB(20, 15, 20, 15),
                                 hintText: data['email'],
-                                hintStyle: TextStyle(
+                                hintStyle: const TextStyle(
                                     fontSize: 20.0, color: Colors.white70),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
@@ -285,50 +283,12 @@ class _UploadingImageToFirebaseStorageState
                         ],
                       ),
                     ),
-                    SizedBox(height: 10),
-                    // Padding(
-                    //   padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-                    //   child: Column(
-                    //     children: [
-                    //       Align(
-                    //         alignment: Alignment.centerLeft,
-                    //         child: Text(
-                    //           "Phone Number",
-                    //           style: TextStyle(
-                    //             fontFamily: "Spartan",
-                    //             fontSize: 20,
-                    //             color: Colors.deepOrangeAccent,
-                    //           ),
-                    //         ),
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       TextFormField(
-                    //           autofocus: false,
-                    //           keyboardType: TextInputType.number,
-                    //           onChanged: (value) {
-                    //             phone = value;
-                    //           },
-                    //           textInputAction: TextInputAction.next,
-                    //           decoration: InputDecoration(
-                    //             filled: true,
-                    //             fillColor: Colors.white.withOpacity(0.2),
-                    //             contentPadding:
-                    //             EdgeInsets.fromLTRB(20, 15, 20, 15),
-                    //             hintText: data["phoneNumber"],
-                    //             hintStyle: TextStyle(
-                    //                 fontSize: 20.0, color: Colors.white70),
-                    //             border: OutlineInputBorder(
-                    //               borderRadius: BorderRadius.circular(10),
-                    //             ),
-                    //           )),
-                    //     ],
-                    //   ),
-                    // ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 10),
+                    const SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
                       child: Container(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         height: 50,
                         width: 140,
                         decoration: BoxDecoration(
@@ -344,7 +304,7 @@ class _UploadingImageToFirebaseStorageState
                           onPressed: () {
                             postDetailsToFirestore();
                           },
-                          child: Text('Save Changes',
+                          child: const Text('Save Changes',
                             style: TextStyle(
                                 color: Colors.white
                             ),
@@ -369,17 +329,11 @@ class _UploadingImageToFirebaseStorageState
 
   postDetailsToFirestore() async {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
-    final _auth = FirebaseAuth.instance;
-    User? user = _auth.currentUser;
+    final auth = FirebaseAuth.instance;
+    User? user = auth.currentUser;
 
     UserModel userModel = UserModel();
     userModel.uid = user?.uid;
-    // if(phone!=null) {
-    //   await firebaseFirestore
-    //       .collection("users")
-    //       .doc(user?.uid)
-    //       .update({'phoneNumber': phone});
-    // }
     if(fname!=null) {
       await firebaseFirestore
           .collection("users")
@@ -398,20 +352,10 @@ class _UploadingImageToFirebaseStorageState
           .doc(user?.uid)
           .update({'email': email});
     }
-    String img_url="https://cdn-icons-png.flaticon.com/512/847/847969.png";
     String fileName = basename(imageFile.path);
     Reference firebaseStorageRef =
     FirebaseStorage.instance.ref().child('uploads/$fileName');
     UploadTask uploadTask = firebaseStorageRef.putFile(imageFile);
-    // uploadTask.whenComplete(() async {
-    //   try {
-    //     img_url = (await firebaseStorageRef.getDownloadURL()).toString();
-    //     print("AAAAAAAAAAAAAAAAAAAAAAAAAA"+img_url);
-    //   } catch (onError) {
-    //     print("Error");
-    //   }
-    //   return (await firebaseStorageRef.getDownloadURL()).toString();
-    // });
     await firebaseFirestore
         .collection("users")
         .doc(user?.uid)
@@ -424,7 +368,3 @@ class _UploadingImageToFirebaseStorageState
   }
 
 }
-
-// Widget Field(String title, String hint){
-//   return
-// }
