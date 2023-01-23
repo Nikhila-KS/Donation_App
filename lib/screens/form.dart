@@ -8,8 +8,8 @@ import '/models/user_model.dart';
 class FormScreen extends StatefulWidget {
   final String? name;
   final String? date;
-
-  const FormScreen({Key? key, this.name, this.date}) : super(key: key);
+  final DocumentReference reff;
+  FormScreen({Key? key, this.name, this.date, required this.reff}) : super(key: key);
   @override
   // ignore: library_private_types_in_public_api
   _FormScreenState createState() => _FormScreenState();
@@ -34,12 +34,12 @@ class _FormScreenState extends State<FormScreen> {
   Widget build(BuildContext context) {
 
     var phoneNumberField = Padding(
-        padding: EdgeInsets.fromLTRB(15.0,0,15.0,0),
+        padding: const EdgeInsets.fromLTRB(15.0,0,15.0,0),
         child: TextFormField(
         autofocus: false,
         keyboardType: TextInputType.number,
         validator: (value) {
-          RegExp regex = new RegExp(r'^.{3,}$');
+          RegExp regex = RegExp(r'^.{3,}$');
           if (value!.isEmpty) {
             return ("Phone Number cannot be Empty");
           }
@@ -55,10 +55,10 @@ class _FormScreenState extends State<FormScreen> {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
-          prefixIcon: Icon(Icons.account_circle, color: Colors.white60,),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.account_circle, color: Colors.white60,),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Phone Number",
-          hintStyle: TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle: const TextStyle(fontSize: 20.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -75,7 +75,6 @@ class _FormScreenState extends State<FormScreen> {
           elevation: 0,
         ),
         body: SafeArea(
-          // Container(decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('assets/loginbg.jpg'),fit: BoxFit.cover)),),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -98,25 +97,14 @@ class _FormScreenState extends State<FormScreen> {
                   ),
                 ),
                 const SizedBox(height:60,),
-
-                // Text(
-                //   widget.name,
-                //   style: TextStyle(
-                //     fontSize: 25.0,
-                //     fontFamily: "lato",
-                //     color: Colors.white,
-                //   ),
-                // ),
-
-                // const SizedBox(height:100,),
                 phoneNumberField,
 
                 const SizedBox(
                   height: 15,
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(48,0,3,0),
-                  child: const Text(
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(48,0,3,0),
+                  child: Text(
                     'I hearby assure that the quality of products donated by me is upto the mark.',
                         style: TextStyle(
                           color: Colors.white70,
@@ -137,7 +125,7 @@ class _FormScreenState extends State<FormScreen> {
                           });
                         },
                       ),
-                      Text('I confirm, I am willing to donate !',
+                      const Text('I confirm, I am willing to donate !',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -160,7 +148,6 @@ class _FormScreenState extends State<FormScreen> {
                             Colors.redAccent,
                           ],
                         ),
-                        // color: Colors.white,
                         borderRadius: BorderRadius.circular(5)),
                     child: Center(
                       child: MaterialButton(
@@ -209,7 +196,15 @@ class _FormScreenState extends State<FormScreen> {
       'date': widget.date,
     };
 
+    CollectionReference ref2 =
+    widget.reff.collection('participants');
+
+    var userdata ={
+      'phone': ph,
+    };
+
     ref.add(data);
+    ref2.add(userdata);
     Fluttertoast.showToast(msg: "Submitted successfully :) ");
     Navigator.pop(context);
   }
