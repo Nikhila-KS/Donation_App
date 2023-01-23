@@ -91,47 +91,47 @@ class _AboutState extends State<About> {
                         fontSize: 20,
                       ))),
 
-              Container(
-                  padding: EdgeInsets.fromLTRB(w*.02, h*.04, w*.02, h*.01),
-                  child: Text('OUR FOUNDERS',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.deepOrangeAccent,
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold))),
-              Divider(
-                height: 0,
-                thickness: h * .006,
-                indent: w * .20,
-                endIndent: w * .20,
-                color: Colors.deepOrangeAccent,
-              ),
-              Container(
-                height: h*.30,
-                padding: EdgeInsets.fromLTRB(w*.02, h*.02, w*.02, h*.02),
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    makeItem(
-                        image: 'assets/Founders/PoojaGera.jpg',
-                        title: 'Pooja Gera',
-                        url: Uri.parse('https://www.linkedin.com/in/pooja-gera')),
-                    makeItem(
-                        image: 'assets/Founders/Nishtha Goyal.jpeg',
-                        title: 'Nishtha Goyal',
-                        url: Uri.parse('https://www.linkedin.com/in/nishtha0801/')),
-                    makeItem(
-                        image: 'assets/Founders/Gaurisha R Srivastava.jpg',
-                        title: 'Gaurisha R Shrivastava',
-                        url: Uri.parse('https://www.linkedin.com/in/gaurisha-r-srivastava/')),
-                    makeItem(
-                        image: 'assets/Founders/Abhigya Verma.jpg',
-                        title: 'Abhigya Verma',
-                        url: Uri.parse('https://www.linkedin.com/in/abhigya02/')),
+//               Container(
+//                   padding: EdgeInsets.fromLTRB(w*.02, h*.04, w*.02, h*.01),
+//                   child: Text('OUR FOUNDERS',
+//                       textAlign: TextAlign.center,
+//                       style: TextStyle(
+//                           color: Colors.deepOrangeAccent,
+//                           fontSize: 32,
+//                           fontWeight: FontWeight.bold))),
+//               Divider(
+//                 height: 0,
+//                 thickness: h * .006,
+//                 indent: w * .20,
+//                 endIndent: w * .20,
+//                 color: Colors.deepOrangeAccent,
+//               ),
+//               Container(
+//                 height: h*.30,
+//                 padding: EdgeInsets.fromLTRB(w*.02, h*.02, w*.02, h*.02),
+//                 child: ListView(
+//                   scrollDirection: Axis.horizontal,
+//                   children: <Widget>[
+//                     makeItem(
+//                         image: 'assets/Founders_PoojaGera.jpg',
+//                         title: 'Pooja Gera',
+//                         url: Uri.parse('https://www.linkedin.com/in/pooja-gera')),
+//                     makeItem(
+//                         image: 'assets/Founders_Nishtha Goyal.jpeg',
+//                         title: 'Nishtha Goyal',
+//                         url: Uri.parse('https://www.linkedin.com/in/nishtha0801/')),
+//                     makeItem(
+//                         image: 'assets/Founders_Gaurisha R Srivastava.jpg',
+//                         title: 'Gaurisha R Shrivastava',
+//                         url: Uri.parse('https://www.linkedin.com/in/gaurisha-r-srivastava/')),
+//                     makeItem(
+//                         image: 'assets/Founders_Abhigya Verma.jpg',
+//                         title: 'Abhigya Verma',
+//                         url: Uri.parse('https://www.linkedin.com/in/abhigya02/')),
 
-                  ],
-                ),
-              ),
+//                   ],
+//                 ),
+//               ),
               Container(
                   padding: EdgeInsets.fromLTRB(w*.02, h*.04, w*.02, h*.01),
                   child: Text('OUR TEAM',
@@ -154,36 +154,52 @@ class _AboutState extends State<About> {
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     makeItem(
+                        image: 'assets/Founders_PoojaGera.jpg',
+                        title: 'Pooja Gera (Founder)',
+                        url: Uri.parse('https://www.linkedin.com/in/pooja-gera')),
+                    makeItem(
+                        image: 'assets/Founders_Nishtha Goyal.jpeg',
+                        title: 'Nishtha Goyal (Founder)',
+                        url: Uri.parse('https://www.linkedin.com/in/nishtha0801/')),
+                    makeItem(
+                        image: 'assets/Founders_Gaurisha R Srivastava.jpg',
+                        title: 'Gaurisha R Shrivastava (Founder)',
+                        url: Uri.parse('https://www.linkedin.com/in/gaurisha-r-srivastava/')),
+                    makeItem(
+                        image: 'assets/Founders_Abhigya Verma.jpg',
+                        title: 'Abhigya Verma (Founder)',
+                        url: Uri.parse('https://www.linkedin.com/in/abhigya02/')),
+                    makeItem(
                         image: 'assets/profile_photos/JhanveeKhola.jpg',
-                        title: 'Jhanvee Khola',
+                        title: 'Jhanvee Khola (Developer)',
                         url: Uri.parse('https://www.linkedin.com/in/jhanvee-khola/')),
                     makeItem(
                         image: 'assets/profile_photos/Nikhila.jpeg',
-                        title: 'Nikhila K S',
+                        title: 'Nikhila K S (Developer)',
                         url: Uri.parse('https://www.linkedin.com/in/know-nikhila-k-s')),
                     makeItem(
                         image: 'assets/profile_photos/NikitaGarg.jpeg',
-                        title: 'Nikita Garg',
+                        title: 'Nikita Garg (Developer)',
                         url: Uri.parse('https://www.linkedin.com/in/nikita-garg-819800220')),
                     makeItem(
                         image: 'assets/profile_photos/NikitaMedhi.jpeg',
-                        title: 'Nikita Medhi',
+                        title: 'Nikita Medhi (Developer)',
                         url: Uri.parse('https://www.linkedin.com/in/nikita-medhi-6aa899239/')),
                     makeItem(
                         image: 'assets/profile_photos/sehaj.jpeg',
-                        title: 'Sehaj',
+                        title: 'Sehaj (Developer)',
                         url: Uri.parse('https://www.linkedin.com/in/sehaj-kapoor-4bbb6020b')),
                     makeItem(
                         image: 'assets/profile_photos/Shreel Trivedi.jpg',
-                        title: 'Shreel Trivedi',
+                        title: 'Shreel Trivedi (Developer)',
                         url: Uri.parse('https://www.linkedin.com/in/shreel-trivedi-932993207')),
                     makeItem(
                         image: 'assets/profile_photos/Shuchita.jpeg',
-                        title: 'Shuchita Bhutani',
+                        title: 'Shuchita Bhutani (Developer)',
                         url:Uri.parse('hhttps://www.linkedin.com/in/shuchita-bhutani-69b882200')),
                     makeItem(
                         image: 'assets/profile_photos/Simran.jpeg',
-                        title: 'Simran Joon',
+                        title: 'Simran Joon (Developer)',
                         url:Uri.parse('http://www.linkedin.com/in/simranjoon')),
 
                   ],
