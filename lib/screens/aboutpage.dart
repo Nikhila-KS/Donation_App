@@ -154,19 +154,19 @@ class _AboutState extends State<About> {
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     makeItem(
-                        image: 'assets/Founders_PoojaGera.jpg',
+                        image: 'assets/profile_photos/Founders_PoojaGera.jpg',
                         title: 'Pooja Gera (Founder)',
                         url: Uri.parse('https://www.linkedin.com/in/pooja-gera')),
                     makeItem(
-                        image: 'assets/Founders_Nishtha Goyal.jpeg',
+                        image: 'assets/profile_photos/Founders_Nishtha Goyal.jpeg',
                         title: 'Nishtha Goyal (Founder)',
                         url: Uri.parse('https://www.linkedin.com/in/nishtha0801/')),
                     makeItem(
-                        image: 'assets/Founders_Gaurisha R Srivastava.jpg',
+                        image: 'assets/profile_photos/Founders_Gaurisha R Srivastava.jpg',
                         title: 'Gaurisha R Shrivastava (Founder)',
                         url: Uri.parse('https://www.linkedin.com/in/gaurisha-r-srivastava/')),
                     makeItem(
-                        image: 'assets/Founders_Abhigya Verma.jpg',
+                        image: 'assets/profile_photos/Founders_Abhigya Verma.jpg',
                         title: 'Abhigya Verma (Founder)',
                         url: Uri.parse('https://www.linkedin.com/in/abhigya02/')),
                     makeItem(
