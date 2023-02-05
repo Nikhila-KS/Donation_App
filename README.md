@@ -72,7 +72,7 @@ A lot of features offered in the app are as follows:
 
 
 * About Us Page - The page which introduces the user to our marvelous team members!!
-<img src="https://user-images.githubusercontent.com/104531927/212486633-970d9c0b-065b-416f-b6db-f650ca55a107.jpeg" width=30%>
+<img src="https://user-images.githubusercontent.com/104531927/216810238-5804d4fc-d5cd-4c6e-a88f-7c46ba79cef7.jpeg" width=30%>
 
 
 # Contributions
