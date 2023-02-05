@@ -30,6 +30,7 @@ class _FormScreenState extends State<FormScreen> {
     }
     return Colors.redAccent;
   }
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
 
@@ -39,11 +40,10 @@ class _FormScreenState extends State<FormScreen> {
         autofocus: false,
         keyboardType: TextInputType.number,
         validator: (value) {
-          RegExp regex = RegExp(r'^.{3,}$');
           if (value!.isEmpty) {
             return ("Phone Number cannot be Empty");
           }
-          if (!regex.hasMatch(value)) {
+          if (!RegExp(r'(^(?:[+0]9)?[0-9]{10,12}$)').hasMatch(value)) {
             return ("Enter Valid number");
           }
           return null;
@@ -76,10 +76,11 @@ class _FormScreenState extends State<FormScreen> {
         ),
         body: SafeArea(
           child: Center(
+            child: Form(
+              key: _formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                //hello
                 const Text(
                   'Donate Now',
                   style: TextStyle(
@@ -151,7 +152,7 @@ class _FormScreenState extends State<FormScreen> {
                         borderRadius: BorderRadius.circular(5)),
                     child: Center(
                       child: MaterialButton(
-                        onPressed: isChecked ? postDetailsToFirestore : null,
+                        onPressed: isChecked && _formKey.currentState!.validate() ? postDetailsToFirestore : null,
                         child: const Text(
                           'Confirm',
                           style: TextStyle(
@@ -166,10 +167,13 @@ class _FormScreenState extends State<FormScreen> {
               ],
             ),
           ),
+          ),
         ),
       ),
     );
   }
+
+
   postDetailsToFirestore() async {
 
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
