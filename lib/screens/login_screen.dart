@@ -25,6 +25,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var w = MediaQuery.of(context).size.width;
+    var h = MediaQuery.of(context).size.height;
+
     //email field
     final emailField = TextFormField(
         autofocus: false,
@@ -49,13 +52,15 @@ class _LoginScreenState extends State<LoginScreen> {
           filled: true,
           fillColor: Colors.white.withOpacity(0.2),
           errorBorder:
-          const OutlineInputBorder(borderSide: BorderSide(color: Colors.white70)),
+          OutlineInputBorder(borderSide:
+          BorderSide(color: Colors.white70)),
           errorStyle: const TextStyle(color: Colors.white),
           prefixIcon: const Icon(Icons.mail,color: Colors.white60,),
-          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+          contentPadding: EdgeInsets.fromLTRB(w*.01, h*0.05, w*.02, h*0.01),
           hintText: "Email",
-          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
-          border: const OutlineInputBorder(
+          hintStyle:  const TextStyle(fontSize: 25.0, color: Colors.white70),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
           ),
         ));
 
@@ -84,9 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
           const OutlineInputBorder(borderSide: BorderSide(color: Colors.white60)),
           errorStyle: const TextStyle(color: Colors.white),
           prefixIcon: const Icon(Icons.vpn_key,color: Colors.white70,),
-          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+          contentPadding: EdgeInsets.fromLTRB(w*.01, h*0.05, w*.02, h*0.01),
           hintText: "Password",
-          hintStyle:  const TextStyle(fontSize: 20.0, color: Colors.white70),
+          hintStyle:  const TextStyle(fontSize: 25.0, color: Colors.white70),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -104,16 +109,17 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
             borderRadius: BorderRadius.circular(5)),
         child: MaterialButton(
-            padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+            padding: EdgeInsets.fromLTRB(w*.1, h*0.015, w*.1, h*0.015),
             minWidth: MediaQuery.of(context).size.width,
             onPressed: () {
               signIn(emailController.text, passwordController.text);
             },
-            child: const Text(
+            child: Text(
               "Login",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                  fontSize: 25,
+                  color: Colors.white, fontWeight: FontWeight.bold),
             )
         ),
       ),
@@ -131,40 +137,49 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(
               color: Colors.transparent,
               child: Padding(
-                padding: const EdgeInsets.all(36.0),
+                padding: EdgeInsets.fromLTRB(w*.1, h*0.05, w*.1, h*0.01),
                 child: Form(
                   key: _formKey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(
-                        height: 50,
+                     SizedBox(
+                        height: h*.1,
                         child: Text('Welcome Back !',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 35,
+                            fontSize: h*.07,
                           ),
                         ),
                       ),
-                      const Text('Log in to continue',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
+                      SizedBox(
+                        height: h*.08,
+                        child: Text('Log in to continue',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: h*.03,
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 45),
+
+                      SizedBox(height: h*.04),
                       emailField,
-                      const SizedBox(height: 25),
+                      SizedBox(height: h*.04),
                       passwordField,
-                      const SizedBox(height: 35),
+                      SizedBox(height: h*.04),
                       loginButton,
-                      const SizedBox(height: 30),
+                      SizedBox(height: h*.04),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            const Text("Don't have an account? ",style:TextStyle(color: Colors.red)),
+                            Text("Don't have an account? ",
+                                style:TextStyle(
+                                    color: Colors.red,
+                                    fontSize: h*.02,
+                                ) ,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
@@ -173,12 +188,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                         builder: (context) =>
                                             RegistrationScreen()));
                               },
-                              child: const Text(
+                              child:  Text(
                                 "SignUp",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 15),
+                                    fontSize: h*.018,
+                                ),
                               ),
                             )
                           ])
