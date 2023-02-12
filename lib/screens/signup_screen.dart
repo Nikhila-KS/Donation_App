@@ -10,6 +10,7 @@ class RegistrationScreen extends StatefulWidget {
 
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
+
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
@@ -29,6 +30,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var w = MediaQuery.of(context).size.width;
+    var h = MediaQuery.of(context).size.height;
+
     //first name field
     final firstNameField = TextFormField(
         autofocus: false,
@@ -229,42 +233,42 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             child: Container(
               color: Colors.transparent,
               child: Padding(
-                padding: const EdgeInsets.all(36.0),
+                padding: EdgeInsets.fromLTRB(w * .1, h * .01, w * .1, h * .01),
                 child: Form(
                   key: _formKey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      const SizedBox(
-                        height: 50,
+                     SizedBox(
+                        height: h*.1,
                         child: Text('Welcome !',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 35,
+                            fontSize: h*.08,
                           ),
                         ),
                       ),
-                      const Text('Create a new account',
+                       Text('Create a new account',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 19,
+                          fontSize: h*.03,
                         ),
                       ),
-                      const SizedBox(height: 45),
+                      SizedBox(height: h * .08),
                       firstNameField,
-                      const SizedBox(height: 20),
+                      SizedBox(height: h * .02),
                       secondNameField,
-                      const SizedBox(height: 20),
+                      SizedBox(height: h * .02),
                       emailField,
-                      const SizedBox(height: 20),
+                      SizedBox(height: h * .02),
                       passwordField,
-                      const SizedBox(height: 20),
+                      SizedBox(height: h * .02),
                       confirmPasswordField,
-                      const SizedBox(height: 20),
+                      SizedBox(height: h * .03),
                       signUpButton,
-                      const SizedBox(height: 15),
+                      SizedBox(height: h * .02),
                     ],
                   ),
                 ),
