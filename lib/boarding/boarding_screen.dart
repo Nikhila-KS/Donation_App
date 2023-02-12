@@ -1,3 +1,4 @@
+import 'package:donation_app_igdtuw/screens/editprofile.dart';
 import 'package:flutter/material.dart';
 import '../screens/login_screen.dart';
 import 'slide.dart';
@@ -32,20 +33,26 @@ class _BoardingScreenState extends State<BoardingPage> {
 
   Widget _buildSlide(Slide slide)
   {
+    var w = MediaQuery.of(context).size.width;
+    var h = MediaQuery.of(context).size.height;
+
     return Column(
       children: <Widget>[
         Expanded(
-          child: Container(margin: const EdgeInsets.fromLTRB(32, 60, 32, 32),
+          child: Container(
+            padding: EdgeInsets.fromLTRB(w*.01, h*0.05, w*.01, h*0.01),
             child: Image.asset(slide.image, fit: BoxFit.contain,),
           ),
         ),
-        const SizedBox(height: 60,),
-        Padding(padding: const EdgeInsets.symmetric(horizontal: 70),
+        SizedBox(height: h * .01),
+        Padding(
+          padding:
+          EdgeInsets.symmetric(horizontal: w * .001,),
           child: Text(
             slide.heading,
             textAlign: TextAlign.start,
-            style: const TextStyle(
-              fontSize: 28,
+            style: TextStyle(
+              fontSize: w * 0.04,
               fontFamily: 'Bebas_Neue',
               fontWeight: FontWeight.w800,
               color: Colors.white,
@@ -53,7 +60,7 @@ class _BoardingScreenState extends State<BoardingPage> {
             ),
           ),
         ),
-        const SizedBox(height: 140,),
+        SizedBox(height: h * .17),
       ],
     );
   }
@@ -92,6 +99,8 @@ class _BoardingScreenState extends State<BoardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    var w = MediaQuery.of(context).size.width;
+    var h = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -109,13 +118,13 @@ class _BoardingScreenState extends State<BoardingPage> {
             child: Column(
               children: <Widget>[
                 _buildPageIndicator(),
-                const SizedBox(
-                  height: 32,
+                SizedBox(
+                  height: h * .035,
                 ),
                 Container(
-                  padding: const EdgeInsets.all(15.0),
-                  height: 50,
-                  width: 300,
+                  padding: EdgeInsets.fromLTRB(w * .03, h * .01, w * .03, h * .01),
+                  height: h*.07,
+                  width: w*.5,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient: LinearGradient(
@@ -135,14 +144,13 @@ class _BoardingScreenState extends State<BoardingPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    LoginScreen()));
+                                builder: (context) =>LoginScreen()));
                       },
-                      child: const Text(
+                      child: Text(
                         'Get Started',
                         style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
                           color: Colors.white,
                           fontFamily: 'Spartan',
                         ),
@@ -150,7 +158,7 @@ class _BoardingScreenState extends State<BoardingPage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                 SizedBox(height: 20),
               ],
             ),
           ),
