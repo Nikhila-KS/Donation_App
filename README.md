@@ -29,7 +29,6 @@ The contents in this project follow the following structure:
 Have a loot at the app:
 https://youtu.be/eFkw-_Cf7lg
 
-A lot of features offered in the app are as follows:
 # Features
 
 * Boarding Screen - this will give you a brief overview of the motivating factors behind our app. 
